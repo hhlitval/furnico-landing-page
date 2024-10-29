@@ -1,0 +1,29 @@
+.shop {
+  background-color: $secondary-bg-color;
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    .section-subtitle {
+      max-width: 50%;
+    }
+  }
+  &-tabs {
+    display: flex;
+    justify-content: center;
+
+    color: $text-color-muted;
+    &__buttons {
+      display: flex;
+      margin-top: 96px;
+      gap: 50px;
+      border-bottom: 1px solid $border-color;
+    }
+    &__btn {
+      line-height: 2;
+      &--active {
+        color: $text-color;
+        font-weight: 500;
+      }
+    }
+  }
+}

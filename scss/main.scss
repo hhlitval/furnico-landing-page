@@ -2,10 +2,11 @@
 @import "common/vars";
 @import "common/base";
 @import "common/mixin";
+@import "common/section";
 
-// @import "blocks/header";
-// @import "blocks/hero";
-// @import "blocks/about";
+@import "blocks/header";
+@import "blocks/why-choose";
+@import "blocks/shop";
 // @import "blocks/projects";
 // @import "blocks/contact";
 // @import "blocks/footer";

@@ -116,16 +116,200 @@ html {
 
 body {
   background: #ffffff;
-  color: #222222;
-  font-size: 24px;
+  color: #000;
+  font-size: 18px;
   font-weight: 400;
-  font-family: "Inter", sans-serif;
+  font-family: "Urbanist", sans-serif;
   line-height: 1;
 }
 body a {
-  color: #222222;
+  color: #000;
+}
+
+.container {
+  position: relative;
+  max-width: 1654px;
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-inline: auto;
+  overflow: hidden;
 }
 
 .hidden {
   display: none !important;
+}
+
+.section {
+  padding-block: 7.5rem;
+}
+.section-title {
+  font-size: 72px;
+}
+.section-subtitle {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #4f4f4f;
+  margin-top: 24px;
+}
+
+.header {
+  padding-bottom: 2rem;
+}
+.header-nav {
+  display: grid;
+  padding-block: 1.8rem;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 48px;
+}
+.header-nav-logo {
+  font-size: 36px;
+}
+.header-nav-main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+.header-nav-main__list-item a {
+  color: #4f4f4f;
+  font-weight: 500;
+}
+.header-nav-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+}
+.header-nav-account img {
+  margin-right: 24px;
+}
+.header-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+.header-heading__title {
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.header-heading img {
+  height: 82px;
+}
+.header-heading__slogan {
+  width: 100px;
+  margin-left: auto;
+  text-align: right;
+  color: #4f4f4f;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+.header-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: calc(100vh - 300px);
+}
+.header-img img {
+  -o-object-fit: cover;
+     object-fit: cover; /* Cover  means that the img will fill the box and preserve its aspect ratio  */
+  -o-object-position: bottom;
+     object-position: bottom;
+  width: 100%;
+}
+
+.why-choose {
+  border-top: 1px solid rgba(42, 45, 52, 0.1019607843);
+}
+.why-choose__container {
+  display: grid;
+  gap: 72px 150px;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.why-choose__heading {
+  text-align: center;
+  margin-bottom: 76px;
+}
+.why-choose__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+}
+.why-choose-reason {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 450px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.why-choose-reason__title {
+  font-size: 52px;
+  margin-bottom: 24px;
+}
+.why-choose-reason__text {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #4f4f4f;
+  margin-bottom: 24px;
+}
+
+.shop {
+  background-color: #f5f5f5;
+}
+.shop-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.shop-heading .section-subtitle {
+  max-width: 50%;
+}
+.shop-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4f4f4f;
+}
+.shop-tabs__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 96px;
+  gap: 50px;
+  border-bottom: 1px solid rgba(42, 45, 52, 0.1019607843);
+}
+.shop-tabs__btn {
+  line-height: 2;
+}
+.shop-tabs__btn--active {
+  color: #000;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
