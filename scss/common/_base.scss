@@ -20,7 +20,7 @@ body {
 
 .container {
   position: relative;
-  max-width: 1654px;
+  max-width: $container-size;
   padding-left: 48px;
   padding-right: 48px;
   margin-inline: auto;

@@ -353,7 +353,6 @@ body a {
   color: #fff;
   background-color: #000;
   content: "- 30%";
-  font-size: 16px;
   text-transform: uppercase;
   right: 0;
   top: 0;
@@ -367,7 +366,6 @@ body a {
   color: #fff;
   background-color: #000;
   content: "new";
-  font-size: 16px;
   text-transform: uppercase;
   right: 0;
   top: 0;
@@ -429,7 +427,8 @@ body a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70vh;
+  margin-inline: auto;
+  max-width: 1654px;
   text-align: center;
   background-image: url("/img/subscription.jpg");
   background-position: center;
@@ -451,7 +450,7 @@ body a {
   background: #ffffff;
 }
 .subscription-heading__title {
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 .subscription-heading__form {
   display: -webkit-box;
