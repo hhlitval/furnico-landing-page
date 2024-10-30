@@ -132,7 +132,9 @@ body a {
   padding-left: 48px;
   padding-right: 48px;
   margin-inline: auto;
-  overflow: hidden;
+}
+.container--small {
+  max-width: 800px;
 }
 
 .hidden {
@@ -191,6 +193,15 @@ body a {
 .header-nav-account img {
   margin-right: 24px;
 }
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .header-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,7 +232,7 @@ body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 350px);
 }
 .header-img img {
   -o-object-fit: cover;
@@ -229,6 +240,11 @@ body a {
   -o-object-position: bottom;
      object-position: bottom;
   width: 100%;
+}
+.header-subheading {
+  margin-top: 18px;
+  font-size: 36px;
+  margin-left: auto;
 }
 
 .why-choose {
@@ -329,6 +345,34 @@ body a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.shop-products-card--reduced {
+  position: relative;
+}
+.shop-products-card--reduced::after {
+  position: absolute;
+  color: #fff;
+  background-color: #000;
+  content: "- 30%";
+  font-size: 16px;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  padding: 0.3rem 0.6rem;
+}
+.shop-products-card--new {
+  position: relative;
+}
+.shop-products-card--new::after {
+  position: absolute;
+  color: #fff;
+  background-color: #000;
+  content: "new";
+  font-size: 16px;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  padding: 0.3rem 0.6rem;
+}
 .shop-products-card__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,12 +398,20 @@ body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 24px;
   gap: 20px;
+}
+.shop-products-card__descr::after {
+  position: absolute;
+  content: url("/img/icons/plus.svg");
+  right: -3.5px;
+  top: -3.4px;
+  vertical-align: baseline;
 }
 .shop-products-card__item {
   text-transform: uppercase;
@@ -368,4 +420,68 @@ body a {
 .shop-products-card__price {
   font-size: 20px;
   font-weight: 550;
+}
+
+.subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  text-align: center;
+  background-image: url("/img/subscription.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subscription-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background: #ffffff;
+}
+.subscription-heading__title {
+  text-wrap: balance;
+}
+.subscription-heading__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin-top: 24px;
+  border-bottom: 1px solid #000;
+}
+.subscription-heading__email {
+  line-height: 2;
+  width: 100%;
+}
+.subscription-heading__email::-webkit-input-placeholder {
+  font-size: 24px;
+  font-weight: 300;
+}
+.subscription-heading__email::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 300;
+}
+.subscription-heading__email:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 300;
+}
+.subscription-heading__email::-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 300;
+}
+.subscription-heading__email::placeholder {
+  font-size: 24px;
+  font-weight: 300;
 }/*# sourceMappingURL=main.css.map */

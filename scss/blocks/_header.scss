@@ -31,6 +31,10 @@
       }
     }
   }
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
   &-heading {
     display: flex;
     align-items: center;
@@ -58,12 +62,17 @@
   &-img {
     display: flex;
 
-    max-height: calc(100vh - 300px);
+    max-height: calc(100vh - 350px);
 
     img {
       object-fit: cover; /* Cover  means that the img will fill the box and preserve its aspect ratio  */
       object-position: bottom;
       width: 100%;
     }
+  }
+  &-subheading {
+    margin-top: 18px;
+    font-size: 36px;
+    margin-left: auto;
   }
 }

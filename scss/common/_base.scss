@@ -24,7 +24,9 @@ body {
   padding-left: 48px;
   padding-right: 48px;
   margin-inline: auto;
-  overflow: hidden;
+  &--small {
+    max-width: 800px;
+  }
 }
 
 .hidden {

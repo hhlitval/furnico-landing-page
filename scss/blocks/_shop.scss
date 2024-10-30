@@ -35,12 +35,26 @@
     &-card {
       display: flex;
       flex-direction: column;
+      &--reduced {
+        position: relative;
+        &::after {
+          @include corner-tag("- 30%");
+        }
+      }
+      &--new {
+        position: relative;
+
+        &::after {
+          @include corner-tag("new");
+        }
+      }
       &__img {
         display: flex;
         align-items: center;
         width: 100%;
         background: $primary-bg-color;
         height: 300px;
+
         img {
           margin: 0 auto;
           padding: 2rem;
@@ -52,9 +66,17 @@
       }
       &__descr {
         display: flex;
+        position: relative;
         flex-direction: column;
         margin-top: 24px;
         gap: 20px;
+        &::after {
+          position: absolute;
+          content: url("/img/icons/plus.svg");
+          right: -3.5px;
+          top: -3.4px;
+          vertical-align: baseline;
+        }
       }
       &__item {
         text-transform: uppercase;
