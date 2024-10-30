@@ -17,12 +17,52 @@
       margin-top: 96px;
       gap: 50px;
       border-bottom: 1px solid $border-color;
+      margin-bottom: 48px;
     }
     &__btn {
       line-height: 2;
       &--active {
         color: $text-color;
+        font-weight: 550;
+      }
+    }
+  }
+  &-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 96px 48px;
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      &__img {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: $primary-bg-color;
+        height: 300px;
+        img {
+          margin: 0 auto;
+          padding: 2rem;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+      &__descr {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 20px;
+      }
+      &__item {
+        text-transform: uppercase;
         font-weight: 500;
+      }
+      &__price {
+        font-size: 20px;
+        font-weight: 550;
       }
     }
   }
