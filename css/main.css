@@ -451,6 +451,7 @@ body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-block: 4.8rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -478,6 +479,7 @@ body a {
 }
 .subscription-heading__title {
   text-wrap: pretty;
+  text-transform: uppercase;
 }
 .subscription-heading__form {
   display: -webkit-box;
@@ -510,4 +512,91 @@ body a {
 .subscription-heading__email::placeholder {
   font-size: 20px;
   font-weight: 300;
+}
+
+.footer {
+  color: #fff;
+  background: #111111;
+  padding: 4.8rem 0 2rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+.footer-col__logo {
+  margin-bottom: 12px;
+}
+.footer-col__copyright {
+  display: block;
+  margin-top: 32px;
+  color: #4f4f4f;
+  line-height: 1.5;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.footer-col__title {
+  text-transform: uppercase;
+  font-weight: 350;
+  margin-bottom: 2.4rem;
+}
+.footer-col__link {
+  margin-bottom: 1.2rem;
+  line-height: 2rem;
+  color: #4f4f4f;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer;
+}
+.footer-col__link:hover {
+  color: #fff;
+}
+.footer-social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer-social-links__link {
+  color: #4f4f4f;
+  margin-bottom: 2.4rem;
+}
+.footer-social-links svg:hover {
+  fill: #fff;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 36px;
+}
+.logo__img {
+  height: 36px;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
