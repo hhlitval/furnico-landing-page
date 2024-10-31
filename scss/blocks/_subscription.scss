@@ -20,14 +20,14 @@
     &__form {
       display: flex;
       width: 70%;
-      margin-top: 24px;
+      margin-top: 36px;
       border-bottom: 1px solid #000;
     }
     &__email {
       line-height: 2;
       width: 100%;
       &::placeholder {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
       }
     }
