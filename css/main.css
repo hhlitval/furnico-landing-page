@@ -115,7 +115,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: #f5f5f5;
   color: #000;
   font-size: 18px;
   font-weight: 400;
@@ -157,6 +157,7 @@ body a {
 }
 
 .header {
+  background: #ffffff;
   padding-bottom: 2rem;
 }
 .header-nav {
@@ -172,7 +173,17 @@ body a {
   margin-bottom: 48px;
 }
 .header-nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
   font-size: 36px;
+}
+.header-nav-logo .logo {
+  height: 36px;
 }
 .header-nav-main__list {
   display: -webkit-box;
@@ -263,6 +274,7 @@ body a {
 }
 
 .why-choose {
+  background: #ffffff;
   border-top: 1px solid rgba(42, 45, 52, 0.1019607843);
 }
 .why-choose__container {

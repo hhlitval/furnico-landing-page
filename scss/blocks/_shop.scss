@@ -1,5 +1,5 @@
 .shop {
-  background-color: $secondary-bg-color;
+  background-color: $primary-bg-color;
   &-heading {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        background: $primary-bg-color;
+        background: $secondary-bg-color;
         height: 300px;
 
         img {
