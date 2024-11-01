@@ -73,9 +73,11 @@
         &::after {
           position: absolute;
           content: url("/img/icons/plus.svg");
-          right: -3.5px;
-          top: -3.4px;
-          vertical-align: baseline;
+          right: 0;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          // vertical-align: baseline;
         }
       }
       &__item {
