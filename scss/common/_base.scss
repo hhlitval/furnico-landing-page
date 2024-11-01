@@ -12,6 +12,9 @@ body {
   font-weight: 400;
   font-family: $font-main;
   line-height: 1;
+  @include tablet() {
+    font-size: clamp(1rem, 0.625rem + 0.78vw, 1.125rem);
+  }
 
   a {
     color: $text-color;
@@ -21,11 +24,10 @@ body {
 .container {
   position: relative;
   max-width: $container-size;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-inline: 48px;
   margin-inline: auto;
-  &--small {
-    max-width: 800px;
+  @include small-tablet() {
+    padding-inline: clamp(1rem, -0.429rem + 7.14vw, 3rem);
   }
 }
 
