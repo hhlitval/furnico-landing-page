@@ -1,15 +1,13 @@
 .section {
-  padding-block: 7.5rem;
+  padding-block: clamp(5.5rem, 4.591rem + 4.55vw, 7.5rem);
   &-title {
-    font-size: 72px;
+    font-size: clamp(2.875rem, 2.136rem + 3.69vw, 4.5rem);
     text-transform: capitalize;
-    // text-transform: uppercase;
   }
   &-subtitle {
-    font-size: 24px;
+    font-size: clamp(1.375rem, 1.318rem + 0.28vw, 1.5rem);
     line-height: 1.4;
     font-weight: 300;
     color: $text-color-muted;
-    margin-top: 24px;
   }
 }

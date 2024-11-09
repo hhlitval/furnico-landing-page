@@ -3,13 +3,26 @@
   &-heading {
     display: flex;
     justify-content: space-between;
+    @include small-tablet() {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
     .section-subtitle {
       max-width: 50%;
+      @include small-tablet() {
+        max-width: 100%;
+        margin-top: 24px;
+      }
     }
   }
   &-tabs {
+    position: relative;
     display: flex;
     justify-content: center;
+    @include mobile() {
+      justify-content: flex-end;
+    }
 
     color: $text-color-muted;
     &__buttons {
@@ -18,6 +31,12 @@
       gap: 50px;
       border-bottom: 1px solid $border-color;
       margin-bottom: 48px;
+
+      @include mobile() {
+        flex-direction: column;
+        gap: 5px;
+        // position: absolute;
+      }
     }
     &__btn {
       line-height: 2;
@@ -25,12 +44,21 @@
         color: $text-color;
         font-weight: 550;
       }
+      @include mobile() {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
     }
   }
   &-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 96px 48px;
+    @include tablet() {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      row-gap: clamp(4.375rem, 3.636rem + 3.69vw, 6rem);
+    }
 
     &-card {
       display: flex;

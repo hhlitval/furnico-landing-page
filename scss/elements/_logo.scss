@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 36px;
+  font-size: clamp(2rem, 1.886rem + 0.57vw, 2.25rem);
   &__img {
-    height: 30px;
+    height: clamp(2rem, 1.886rem + 0.57vw, 2.25rem);
   }
 }
