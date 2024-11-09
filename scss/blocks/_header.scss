@@ -75,7 +75,7 @@
       text-transform: uppercase;
       letter-spacing: -1px;
       text-align: center;
-      @include big-desktop() {
+      @include desktop() {
         font-weight: 450;
       }
       @include tablet() {
@@ -130,7 +130,7 @@
     }
     &__text {
       text-wrap: nowrap;
-      @include big-desktop() {
+      @include desktop() {
         font-size: clamp(1.75rem, 0.519rem + 1.92vw, 2.25rem);
       }
       @include tablet() {

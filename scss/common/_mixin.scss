@@ -1,10 +1,10 @@
-@mixin for-desktop {
+@mixin big-screen {
   @media (min-width: (1025px)) {
     @content;
   }
 }
 
-@mixin big-desktop {
+@mixin desktop {
   @media (max-width: (1440px)) {
     @content;
   }
