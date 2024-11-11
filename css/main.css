@@ -353,23 +353,6 @@ body a {
   border-top: 1px solid rgba(42, 45, 52, 0.1019607843);
 }
 .why-choose__container {
-  display: grid;
-  gap: 72px 150px;
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.why-choose__heading {
-  text-align: center;
-  margin-bottom: clamp(3.25rem, 2.705rem + 2.73vw, 4.75rem);
-}
-.why-choose__img {
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 100%;
-}
-.why-choose-reason {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,20 +360,65 @@ body a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 72px;
+}
+@media (max-width: 1024px) {
+  .why-choose__container {
+    gap: clamp(3rem, 2.318rem + 3.41vw, 4.5rem);
+  }
+}
+.why-choose__heading {
+  text-align: center;
+  margin-bottom: clamp(3.25rem, 2.705rem + 2.73vw, 4.75rem);
+}
+.why-choose-reason {
+  display: grid;
+  -webkit-column-gap: 150px;
+     -moz-column-gap: 150px;
+          column-gap: 150px;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.why-choose-reason.reversed .why-choose-reason__img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 1024px) {
+  .why-choose-reason.reversed .why-choose-reason__img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .why-choose-reason {
+    grid-template-columns: 1fr;
+  }
+}
+.why-choose-reason__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
 }
 .why-choose-reason__title {
-  font-size: 52px;
+  font-size: clamp(2.75rem, 1.519rem + 1.92vw, 3.25rem);
+  margin-top: 20px;
   margin-bottom: 24px;
 }
+@media (max-width: 1024px) {
+  .why-choose-reason__title {
+    font-size: clamp(2rem, 1.659rem + 1.7vw, 2.75rem);
+    margin-bottom: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem);
+  }
+}
 .why-choose-reason__text {
-  font-size: 24px;
+  font-size: clamp(1.25rem, 1.17rem + 0.4vw, 1.5rem);
   line-height: 1.4;
   font-weight: 300;
   color: #4f4f4f;
-  margin-bottom: 24px;
 }
 
 .shop {

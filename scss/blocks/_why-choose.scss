@@ -2,33 +2,52 @@
   background: $secondary-bg-color;
   border-top: 1px solid $border-color;
   &__container {
-    display: grid;
-    gap: 72px 150px;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    @include tablet() {
+      gap: clamp(3rem, 2.318rem + 3.41vw, 4.5rem);
+    }
   }
   &__heading {
     text-align: center;
     margin-bottom: clamp(3.25rem, 2.705rem + 2.73vw, 4.75rem);
   }
-  &__img {
-    align-self: center;
-    width: 100%;
-  }
+
   &-reason {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    column-gap: 150px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    &.reversed {
+      .why-choose-reason__img {
+        order: 1;
+        @include tablet() {
+          order: 0;
+        }
+      }
+    }
+    @include tablet() {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      align-self: center;
+      width: 100%;
+    }
     &__title {
-      font-size: 52px;
+      font-size: clamp(2.75rem, 1.519rem + 1.92vw, 3.25rem);
+      margin-top: 20px;
       margin-bottom: 24px;
+      @include tablet() {
+        font-size: clamp(2rem, 1.659rem + 1.7vw, 2.75rem);
+        margin-bottom: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem);
+      }
     }
     &__text {
-      font-size: 24px;
+      font-size: clamp(1.25rem, 1.17rem + 0.4vw, 1.5rem);
       line-height: 1.4;
       font-weight: 300;
       color: $text-color-muted;
-      margin-bottom: 24px;
     }
   }
 }
