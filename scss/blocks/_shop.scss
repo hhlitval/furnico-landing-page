@@ -31,22 +31,34 @@
       gap: 50px;
       border-bottom: 1px solid $border-color;
       margin-bottom: 48px;
-
       @include mobile() {
-        flex-direction: column;
-        gap: 5px;
-        // position: absolute;
+        display: none;
       }
     }
     &__btn {
       line-height: 2;
-      &--active {
+      &.active {
         color: $text-color;
         font-weight: 550;
+        border-bottom: 1px solid $text-color;
       }
+    }
+    &__dropdown {
+      display: none;
       @include mobile() {
-        &:not(:first-child) {
-          display: none;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        color: $text-color;
+        font-weight: 500;
+        margin: 48px 0 24px;
+        padding-block: 0.25em;
+        border-bottom: 1px solid $border-color;
+        text-transform: uppercase;
+        border-radius: 0;
+        &:focus,
+        &:active {
+          outline: 0;
         }
       }
     }

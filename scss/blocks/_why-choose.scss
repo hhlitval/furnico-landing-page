@@ -9,7 +9,7 @@
   }
   &__heading {
     text-align: center;
-    margin-bottom: 76px;
+    margin-bottom: clamp(3.25rem, 2.705rem + 2.73vw, 4.75rem);
   }
   &__img {
     align-self: center;
