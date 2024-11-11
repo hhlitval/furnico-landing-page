@@ -24,7 +24,7 @@ body {
 .container {
   position: relative;
   max-width: $container-size;
-  padding-inline: 48px;
+  padding-inline: $container-padding;
   margin-inline: auto;
   @include small-tablet() {
     padding-inline: clamp(1rem, -0.429rem + 7.14vw, 3rem);

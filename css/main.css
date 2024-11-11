@@ -622,7 +622,7 @@ body a {
       -ms-flex-align: center;
           align-items: center;
   margin-inline: auto;
-  max-width: 1654px;
+  max-width: 1558px;
   text-align: center;
   background-image: url("/img/subscription.jpg");
   background-position: center;
@@ -640,20 +640,38 @@ body a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-inline: auto;
   padding: 2rem;
   background: #ffffff;
+  max-width: 720px;
 }
 .subscription-heading__title {
-  text-wrap: pretty;
+  text-wrap: balance;
   text-transform: uppercase;
+  margin-bottom: 24px;
+}
+@media (max-width: 576px) {
+  .subscription-heading__title {
+    font-size: clamp(2.25rem, 0.766rem + 7.42vw, 3.438rem);
+  }
+}
+@media (max-width: 576px) {
+  .subscription-heading__subtitle {
+    font-size: clamp(1.25rem, 1.016rem + 1.17vw, 1.438rem);
+  }
 }
 .subscription-heading__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  width: 370px;
   margin-top: 36px;
   border-bottom: 1px solid #000;
+}
+@media (max-width: 576px) {
+  .subscription-heading__form {
+    width: 85%;
+  }
 }
 .subscription-heading__email {
   line-height: 2;
@@ -678,6 +696,33 @@ body a {
 .subscription-heading__email::placeholder {
   font-size: 20px;
   font-weight: 300;
+}
+@media (max-width: 576px) {
+  .subscription-heading__email::-webkit-input-placeholder {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+    line-height: 1.5;
+  }
+  .subscription-heading__email::-moz-placeholder {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+    line-height: 1.5;
+  }
+  .subscription-heading__email:-ms-input-placeholder {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+    line-height: 1.5;
+  }
+  .subscription-heading__email::-ms-input-placeholder {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+    line-height: 1.5;
+  }
+  .subscription-heading__email::placeholder {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+    line-height: 1.5;
+  }
+}
+@media (max-width: 576px) {
+  .subscription-heading__email {
+    font-size: 16px;
+  }
 }
 
 .footer {

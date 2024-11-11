@@ -3,7 +3,7 @@
   margin-block: 4.8rem;
   align-items: center;
   margin-inline: auto;
-  max-width: $container-size;
+  max-width: calc($container-size - $container-padding * 2);
   text-align: center;
   background-image: url("/img/subscription.jpg");
   background-position: center;
@@ -13,17 +13,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-inline: auto;
     padding: 2rem;
     background: #ffffff;
+    max-width: 720px;
     &__title {
-      text-wrap: pretty;
+      text-wrap: balance;
       text-transform: uppercase;
+      margin-bottom: 24px;
+      @include mobile() {
+        font-size: clamp(2.25rem, 0.766rem + 7.42vw, 3.438rem);
+      }
+    }
+    &__subtitle {
+      @include mobile() {
+        font-size: clamp(1.25rem, 1.016rem + 1.17vw, 1.438rem);
+      }
     }
     &__form {
       display: flex;
-      width: 70%;
+      width: 370px;
       margin-top: 36px;
       border-bottom: 1px solid #000;
+      @include mobile() {
+        width: 85%;
+      }
     }
     &__email {
       line-height: 2;
@@ -31,6 +45,13 @@
       &::placeholder {
         font-size: 20px;
         font-weight: 300;
+        @include mobile() {
+          font-size: clamp(1rem, 0.688rem + 1.56vw, 1.25rem);
+          line-height: 1.5;
+        }
+      }
+      @include mobile() {
+        font-size: 16px;
       }
     }
   }
