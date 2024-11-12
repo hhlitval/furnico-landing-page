@@ -140,5 +140,9 @@
   &__btn {
     margin: 24px 0;
     align-self: flex-end;
+    @include tablet() {
+      align-self: center;
+      font-size: clamp(1.25rem, 1.136rem + 0.57vw, 1.5rem);
+    }
   }
 }

@@ -25,6 +25,10 @@
     width: 240px;
     font-size: 24px;
     font-weight: 500;
+    @include tablet() {
+      font-size: clamp(1.25rem, 1.136rem + 0.57vw, 1.5rem);
+      width: clamp(11.25rem, 9.545rem + 8.52vw, 15rem);
+    }
     &::after {
       width: 16px;
       height: 16px;
