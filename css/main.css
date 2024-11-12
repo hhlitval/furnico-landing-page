@@ -353,9 +353,36 @@ body a {
       align-self: flex-end;
 }
 
+.categories {
+  border-top: 1px solid rgba(42, 45, 52, 0.1019607843);
+  border-bottom: 1px solid rgba(42, 45, 52, 0.1019607843);
+  background-color: #ffffff;
+}
+.categories__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 72px 0;
+  text-transform: uppercase;
+  font-size: 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.categories__item {
+  cursor: pointer;
+}
+.categories__dot {
+  content: url("/img/icons/dot.svg");
+  width: 70px;
+  height: 70px;
+}
+
 .why-choose {
   background: #ffffff;
-  border-top: 1px solid rgba(42, 45, 52, 0.1019607843);
 }
 .why-choose__container {
   display: -webkit-box;

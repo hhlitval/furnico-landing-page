@@ -1,0 +1,21 @@
+.categories {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  background-color: $secondary-bg-color;
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 72px 0;
+    text-transform: uppercase;
+    font-size: 32px;
+    justify-content: space-between;
+  }
+  &__item {
+    cursor: pointer;
+  }
+  &__dot {
+    content: url("/img/icons/dot.svg");
+    width: 70px;
+    height: 70px;
+  }
+}
