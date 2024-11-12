@@ -49,5 +49,11 @@
       font-weight: 300;
       color: $text-color-muted;
     }
+    &__btn {
+      margin-top: 24px;
+      @include tablet() {
+        margin-top: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem);
+      }
+    }
   }
 }
