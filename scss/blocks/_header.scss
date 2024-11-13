@@ -14,9 +14,6 @@
       gap: 8px;
     }
     &-main {
-      @include small-tablet() {
-        display: none;
-      }
       &__list {
         display: flex;
         gap: 48px;
@@ -25,24 +22,137 @@
           gap: clamp(2.25rem, 4.69vw, 3rem);
         }
 
+        @include small-tablet() {
+          display: none;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &.mobile {
+          @include small-tablet() {
+            position: fixed;
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 500;
+            gap: unset;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            min-width: 300px;
+            padding: 120px 24px 0;
+            display: flex;
+            flex-direction: column;
+            background-color: $primary-bg-color;
+            z-index: 3;
+          }
+          @include mobile() {
+            width: 100vw;
+          }
+        }
+
         &-item {
+          @include small-tablet() {
+            padding: 8px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid $border-color;
+          }
           a {
             color: $text-color-muted;
-            font-weight: 500;
+
+            @include small-tablet() {
+              color: $text-color;
+            }
+          }
+        }
+      }
+      &__buttons {
+        display: none;
+        color: $text-color-muted;
+        text-transform: uppercase;
+        justify-content: center;
+
+        a {
+          color: $text-color-muted;
+        }
+        @include small-tablet() {
+          display: flex;
+          flex-direction: column;
+          margin-top: 24px;
+        }
+        &-login {
+          display: flex;
+          gap: 5px;
+          font-size: 16px;
+          img {
+            width: 16px;
           }
         }
       }
     }
 
-    &-account {
+    &-controls {
       display: flex;
       justify-self: end;
       @include small-tablet() {
-        display: none;
+        margin-left: auto;
+        grid-column: 3;
       }
+
       a {
-        &:not(:last-child) {
+        &:not(:nth-child(3)) {
           margin-right: 24px;
+          z-index: 9;
+        }
+        &:nth-child(2n + 1) {
+          @include small-tablet() {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-burger {
+      display: none;
+
+      @include small-tablet() {
+        grid-column: 3;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 24px;
+        gap: 6px;
+        z-index: 9;
+        cursor: pointer;
+
+        & > span {
+          width: 100%;
+          height: 2px;
+          transform: translate3d(0px, 0px, 0px);
+          transform-origin: 0% 50%;
+          opacity: 1;
+          background-color: $accent-color;
+          transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+          border-radius: 1rem;
+
+          &:nth-child(2) {
+            width: 67%;
+          }
+        }
+      }
+      &.mobile > * {
+        &:first-child {
+          width: 100%;
+          transform: rotate(45deg) translate3d(0px, -1px, 0px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          width: 0px;
+        }
+        &:last-child {
+          width: 100%;
+          transform: rotate(-45deg) translate3d(0px, 0px, 0px);
         }
       }
     }
@@ -138,7 +248,7 @@
     }
   }
   &__btn {
-    margin: 24px 0;
+    margin: 32px 0;
     align-self: flex-end;
     @include tablet() {
       align-self: center;

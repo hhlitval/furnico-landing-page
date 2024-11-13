@@ -34,3 +34,7 @@ body {
 .hidden {
   display: none !important;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
