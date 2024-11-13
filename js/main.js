@@ -10,13 +10,13 @@ mobileMenu.addEventListener("click", () => {
   } else {
     document.documentElement.classList.remove("no-scroll");
   }
-  // window.addEventListener("resize", function () {
-  //   // above 978px
-  //   if (window.matchMedia("(min-width: 978px)").matches) {
-  //     if (nav.classList.contains("mobile")) {
-  //       nav.classList.remove("mobile");
-  //       document.documentElement.classList.remove("no-scroll");
-  //     }
-  //   }
-  // });
+  window.addEventListener("resize", function () {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      if (nav.classList.contains("mobile")) {
+        nav.classList.remove("mobile");
+        mobileMenu.classList.remove("mobile");
+        document.documentElement.classList.remove("no-scroll");
+      }
+    }
+  });
 });

@@ -17,6 +17,7 @@
       &__list {
         display: flex;
         gap: 48px;
+        transition: all 0.3s ease-in-out;
 
         @include tablet() {
           gap: clamp(2.25rem, 4.69vw, 3rem);
@@ -24,7 +25,6 @@
 
         @include small-tablet() {
           display: none;
-          transition: all 0.3s ease-in-out;
         }
 
         &.mobile {
