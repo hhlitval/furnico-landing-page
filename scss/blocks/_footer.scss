@@ -70,18 +70,4 @@
       }
     }
   }
-
-  &-social-links {
-    display: flex;
-    flex-direction: column;
-
-    &__link {
-      color: $text-color-muted;
-      margin-bottom: 12px;
-      line-height: 2;
-      &:hover {
-        color: $text-color-white;
-      }
-    }
-  }
 }

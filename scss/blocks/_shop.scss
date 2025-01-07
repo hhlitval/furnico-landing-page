@@ -112,12 +112,12 @@
         gap: 20px;
         &::after {
           position: absolute;
-          content: url("/img/icons/plus.svg");
+          content: url("../img/icons/plus.svg");
+          cursor: pointer;
           right: 0;
           top: 0;
           width: 24px;
           height: 24px;
-          // vertical-align: baseline;
         }
       }
       &__item {

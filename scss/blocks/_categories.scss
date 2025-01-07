@@ -27,9 +27,9 @@
     cursor: pointer;
   }
   &__dot {
-    content: url("/img/icons/dot.svg");
-    width: 10px;
-    height: 10px;
+    content: url("../img/icons/dot.svg");
+    width: 0.4rem;
+    height: 0.4rem;
 
     @include tablet() {
       display: none;
